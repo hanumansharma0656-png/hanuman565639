@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>मेरी डिजिटल पुस्तकालय</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f4f9;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(120deg,#101c3c,#174b78);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+nav {
+    background: #09172e;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #ffd43b;
+}
+
+.hero {
+    text-align: center;
+    padding: 45px 15px;
+    background: white;
+}
+
+.hero h2 {
+    color: #174b78;
+    font-size: 28px;
+}
+
+.hero p {
+    margin-top: 12px;
+    color: #555;
+}
+
+.search {
+    text-align: center;
+    padding: 20px;
+}
+
+.search input {
+    width: 85%;
+    max-width: 450px;
+    padding: 13px;
+    border: 1px solid #aaa;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+.container {
+    padding: 30px 5%;
+}
+
+.section-title {
+    text-align: center;
+    color: #174b78;
+    margin-bottom: 25px;
+    font-size: 27px;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+}
+
+.book {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px #0002;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: 0.3s;
+}
+
+.book:hover {
+    transform: translateY(-7px);
+}
+
+.book img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    background: #dce5f0;
+}
+
+.book h3 {
+    margin: 15px 5px 8px;
+    color: #174b78;
+}
+
+.book p {
+    color: #666;
+    padding: 5px;
+}
+
+.btn {
+    display: inline-block;
+    background: #1769aa;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    margin-top: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0b365f;
+}
+
+.video-section {
+    background: #e3edf8;
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.video-section video {
+    width: 90%;
+    max-width: 650px;
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
+.about, .contact {
+    padding: 40px 20px;
+    text-align: center;
+    background: white;
+}
+
+.contact input, .contact textarea {
+    display: block;
+    width: 90%;
+    max-width: 450px;
+    margin: 12px auto;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+}
+
+footer {
+    background: #09172e;
+    color: white;
+    padding: 22px;
+    text-align: center;
+}
+
+@media(max-width:600px) {
+    header h1 { font-size: 25px; }
+    nav a { display: inline-block; margin: 7px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📚 मेरी डिजिटल पुस्तकालय</h1>
+    <p>पढ़ें, सीखें और अपना ज्ञान बढ़ाएँ</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#books">Books</a>
+    <a href="#videos">Videos</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+    <h2>आपका स्वागत है</h2>
+    <p>यहाँ आपको ज्ञानवर्धक पुस्तकें और शैक्षणिक वीडियो मिलेंगे।</p>
+</section>
+
+<div class="search">
+    <input type="text" id="searchBox"
+    placeholder="किताब का नाम खोजें..."
+    onkeyup="searchBooks()">
+</div>
+
+<section class="container" id="books">
+    <h2 class="section-title">📖 हमारी पुस्तकें</h2>
+
+    <div class="books">
+
+        <div class="book">
+            <img src="https://placehold.co/400x300/174b78/ffffff?text=Book+1"
+            alt="किताब 1">
+            <h3>कंप्यूटर की पुस्तक</h3>
+            <p>कक्षा 11 एवं 12</p>
+            <a class="btn" href="C:\Users\10\AppData\Roaming\Microsoft\Windows\Network Shortcuts\m.pdf" target="_blank">
+                PDF पढ़ें
+            </a>
+        </div>
+
+        <div class="book">
+            <img src="https://placehold.co/400x300/28704c/ffffff?text=Book+2"
+            alt="किताब 2">
+            <h3>हिंदी साहित्य</h3>
+            <p>हिंदी भाषा एवं साहित्य</p>
+            <a class="btn" href="books/book2.pdf" target="_blank">
+                PDF पढ़ें
+            </a>
+        </div>
+
+        <div class="book">
+            <img src="https://placehold.co/400x300/805020/ffffff?text=Book+3"
+            alt="किताब 3">
+            <h3>संस्कृत पुस्तक</h3>
+            <p>संस्कृत अध्ययन</p>
+            <a class="btn" href="books/book3.pdf" target="_blank">
+                PDF पढ़ें
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="video-section" id="videos">
+    <h2 class="section-title">🎬 वीडियो लाइब्रेरी</h2>
+    <p>यहाँ अपनी शैक्षणिक वीडियो रखें।</p>
+    <video controls>
+        <source src="E:\speech no. 2.vob" type="video/mp4">
+        आपका ब्राउज़र वीडियो सपोर्ट नहीं करता।
+    </video>
+</section>
+
+<section class="about" id="about">
+    <h2 class="section-title">हमारे बारे में</h2>
+    <p>यह डिजिटल पुस्तकालय शिक्षा और ज्ञान को बढ़ावा देने के लिए बनाया गया है।</p>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="section-title">संपर्क करें</h2>
+    <form onsubmit="alert('आपका संदेश प्राप्त हुआ!'); return false;">
+        <input type="text" placeholder="आपका नाम" required>
+        <input type="email" placeholder="ईमेल पता" required>
+        <textarea placeholder="अपना संदेश लिखें" rows="4" required></textarea>
+        <button class="btn" type="submit">संदेश भेजें</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 मेरी डिजिटल पुस्तकालय | All Rights Reserved</p>
+</footer>
+
+<script>
+function searchBooks() {
+    let input = document.getElementById("searchBox").value.toLowerCase();
+    let books = document.querySelectorAll(".book");
+
+    books.forEach(function(book) {
+        let name = book.innerText.toLowerCase();
+        book.style.display = name.includes(input) ? "block" : "none";
+    });
+}
+</script>
+
+</body>
+</html>
